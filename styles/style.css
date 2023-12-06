@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700&display=swap");
+body {
+  margin: 0;
+  width: 110%;
+}
+@media (min-width: 400px) {
+  body {
+    width: 100%;
+  }
+}
+body header {
+  background-image: url(../images/photos/image-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 800px;
+}
+body header .start {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+body header .start_title {
+  color: #fff;
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 8px;
+  margin: 95px auto 0 auto;
+}
+body header .start_fleche {
+  margin-top: 85px;
+}
+body header .start .nav {
+  margin-top: 50px;
+  width: 95%;
+}
+body header .start .nav_bar {
+  display: none;
+}
+body header .start .nav_mob {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body header .start .nav_burger {
+  margin-right: 10%;
+}
+@media (min-width: 400px) {
+  body header .start .start_title {
+    font-size: 56px;
+  }
+  body header .start .nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  body header .start .nav_burger {
+    display: none;
+  }
+  body header .start .nav_bar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40vw;
+  }
+  body header .start .nav_bar_link {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+  }
+  body header .start .contact {
+    background-color: #fff;
+    color: #24303E;
+    font-family: "Fraunces", serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 28px;
+    padding: 15px 30px;
+  }
+  body header .start .contact:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
+}
+body main .brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .brand_img {
+  max-width: 100%;
+}
+@media (min-width: 400px) {
+  body main .brand {
+    flex-flow: row-reverse nowrap;
+    align-items: normal;
+  }
+  body main .brand_img {
+    max-width: 50%;
+  }
+}
+body main .audience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .audience_img {
+  max-width: 100%;
+}
+@media (min-width: 400px) {
+  body main .audience {
+    flex-flow: row nowrap;
+    align-items: normal;
+  }
+  body main .audience_img {
+    max-width: 50%;
+  }
+}
+body main .content {
+  max-width: 50%;
+  padding: 10%;
+  text-align: center;
+}
+body main .content_title {
+  color: #24303E;
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+  font-weight: 900;
+}
+body main .content_txt {
+  color: #808397;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+}
+body main .content_link {
+  color: #24303E;
+  font-family: "Fraunces", serif;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+@media (min-width: 400px) {
+  body main .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+body main .backpic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main .backpic_pose {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5% 15%;
+  text-align: center;
+  color: #24554A;
+}
+body main .backpic_title {
+  font-family: "Fraunces", serif;
+  font-size: 28px;
+  font-weight: 900;
+}
+body main .backpic_txt {
+  font-family: "Barlow", sans-serif;
+  font-size: 16px;
+}
+body main .backpic .design {
+  height: 600px;
+  background-image: url(../images/photos/image-graphic-design.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body main .backpic .photo {
+  height: 600px;
+  background-image: url(../images/photos/image-photography.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (min-width: 400px) {
+  body main .backpic {
+    flex-flow: row nowrap;
+  }
+}
+body main .clients {
+  margin: 10% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main .clients_title {
+  padding: 10%;
+  grid-area: a;
+  text-align: center;
+  text-transform: uppercase;
+  color: #A7AAAD;
+  font-family: "Fraunces", serif;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+body main .clients_about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  padding: 5% 10%;
+}
+body main .clients_about_pp {
+  width: 72px;
+  border-radius: 72px;
+}
+body main .clients_about_txt {
+  text-align: center;
+  color: #5B636D;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+}
+body main .clients_about_name {
+  color: #24303E;
+  font-family: "Fraunces", serif;
+  font-size: 18px;
+  font-weight: 900;
+}
+body main .clients_about_job {
+  color: #A7AAAD;
+  font-family: "Barlow", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+}
+@media (min-width: 400px) {
+  body main .clients {
+    display: grid;
+    grid-template-areas: ". a ." "b c d";
+    gap: 30px;
+  }
+  body main .clients .emi {
+    grid-area: b;
+  }
+  body main .clients .thomas {
+    grid-area: c;
+  }
+  body main .clients .jennie {
+    grid-area: d;
+  }
+}
+body main .galery {
+  display: flex;
+  flex-flow: row wrap;
+}
+body main .galery_img {
+  max-width: 50%;
+}
+@media (min-width: 400px) {
+  body main .galery {
+    flex-flow: row nowrap;
+  }
+  body main .galery_img {
+    max-width: 25%;
+  }
+}
+body footer {
+  background: #90D4C6;
+  height: 350px;
+  padding: 72px auto;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body footer .foot {
+  display: inline-flex;
+  gap: 57px;
+  line-height: 25px;
+}
+body footer .foot_link {
+  color: #458D7E;
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+}
+body footer .foot_link:hover {
+  color: #fff;
+  cursor: pointer;
+}
+body footer .icon {
+  display: inline-flex;
+  gap: 30px;
+}/*# sourceMappingURL=style.css.map */

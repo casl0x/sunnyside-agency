@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+$mb-screen: 400px;
+$dk-screen: 1440px;
+$color-head: #fff;
+$hover-opacity: 0.2;
+$font-title: 'Fraunces', serif;
+$color-title: #24303E;
+$font-text: 'Barlow', sans-serif;
+$color-text: #808397;
+$color-lm-brand: #FAD400;
+$color-lm-audiance: #FE7766;
+$color-design: #24554A;
+$color-title-photo: #052C3B;
+$color-text-photo: #19536C;
+$color-title-client: #A7AAAD;
+$color-text-client: #5B636D;
+$bgcolor-footer: #90D4C6;
+$color-lg-icone-footer: #2C7566;
+$color-foot-txt:#458D7E;;
+
+@mixin media-minwidth($screensize){
+    @media (min-width:$screensize) {
+        @content;
+    } 
+}
+
+body {
+    margin: 0;
+    width: 110%;
+    @include media-minwidth($mb-screen){
+        width: 100%;
+    }
+    header {
+        background: {
+            image: url(../images/photos/image-header.jpg);
+            size: cover;
+            repeat: no-repeat;
+            position: center;
+        }
+        height: 800px;
+        .start {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            &_title {
+                color: $color-head;
+                font: {
+                    family: $font-title;
+                    size:40px;
+                    weight: 900;
+                }
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: 8px;
+                margin: 95px auto 0 auto;
+            }
+            &_fleche {
+                margin-top: 85px;
+            }
+            .nav {
+                margin-top: 50px;
+                width: 95%;
+                &_bar {
+                    display: none;
+                }
+                &_mob {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                &_burger {
+                    margin-right: 10%;
+                }
+            }
+
+            @include media-minwidth($mb-screen) {
+                .start_title {
+                    font-size: 56px;
+                }
+                .nav {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    &_burger {
+                        display: none;
+                    }
+                    &_bar {
+                        display: flex;
+                        flex-flow: row;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        width: 40vw;
+                        &_link {
+                            color: $color-head;
+                            text-decoration: none;
+                            font: {
+                                family: $font-text;
+                                size: 18px;
+                            }
+                        }
+                        
+                        
+                    }
+                }
+                .contact {
+                    background-color: $color-head;
+                    color: $color-title;
+                    font: {
+                        family: $font-title;
+                        size: 15px;
+                    }
+                    text-transform: uppercase;
+                    text-align: center;
+                    border-radius: 28px;
+                    padding: 15px 30px;
+                    &:hover {
+                        color: $color-head;
+                        background-color: rgba($color-head, $hover-opacity);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+       
+    }
+    main {
+        .brand {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &_img {
+                max-width: 100%;
+            }
+            @include media-minwidth($mb-screen){
+                flex-flow: row-reverse nowrap;
+                align-items: normal;
+                &_img {
+                    max-width: 50%;
+                }
+            }
+        }
+        .audience {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &_img {
+                max-width: 100%;
+            }
+            @include media-minwidth($mb-screen){
+                flex-flow: row nowrap;
+                align-items: normal;
+                &_img {
+                    max-width: 50%;
+                } 
+            }
+        }
+        .content {
+            max-width: 50%;
+            padding: 10%;
+            text-align: center;
+            &_title {
+                color: $color-title;
+                font: {
+                    family: $font-title;
+                    size: 40px;
+                    weight: 900;
+                }
+            }
+            &_txt {
+                color: $color-text;
+                font: {
+                    family: $font-text;
+                    size: 18px;
+                }
+                line-height: 30px;
+            }
+            &_link {
+                color: $color-title;
+                font: {
+                    family: $font-title;
+                    size: 15px;
+                    weight: 900;
+                }
+                line-height: 25px; 
+                letter-spacing: 1px;
+                text: {
+                    transform: uppercase;
+                    decoration: none;
+                }
+            }
+            @include media-minwidth($mb-screen){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+
+        .backpic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &_pose {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: flex-end;
+                padding: 5% 15%;
+                text-align: center;
+                color: $color-design;
+            }
+            &_title {
+                font: {
+                    family: $font-title;
+                    size: 28px;
+                     weight: 900;
+                }
+            }
+            &_txt {
+                font: {
+                     family: $font-text;
+                    size: 16px;
+                }
+            }
+            
+            .design {
+                height: 600px;
+                background: {
+                    image: url(../images/photos/image-graphic-design.jpg);
+                    size: cover;
+                    repeat: no-repeat;
+                    position: center;
+                }
+            }
+            .photo {
+                height: 600px;
+                background: {
+                    image: url(../images/photos/image-photography.jpg);
+                    size: cover;
+                    repeat: no-repeat;
+                    position: center;
+                }
+            }
+            @include media-minwidth($mb-screen){
+                flex-flow: row nowrap;
+            }
+
+        }
+        .clients {
+            margin: 10% 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &_title {
+                padding: 10%;
+                grid-area: a;
+                text-align: center;
+                text-transform: uppercase;
+                color: $color-title-client;
+                font: {
+                    family: $font-title;
+                    size: 20px;
+                    weight: 900;
+                }
+                letter-spacing: 5px;
+            }
+            &_about {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 350px;
+                padding: 5% 10%;
+                &_pp {
+                    width: 72px;
+                    border-radius: 72px;
+                }
+                &_txt {
+                    text-align: center;
+                    color: $color-text-client;
+                    font: {
+                        family:  $font-text;
+                        size: 18px;
+                    }
+                    line-height: 32px;
+                }
+                &_name {
+                    color: $color-title;
+                    font: {
+                        family: $font-title;
+                        size: 18px;
+                        weight: 900;
+                    }
+                }
+                &_job {
+                    color: $color-title-client;
+                    font: {
+                        family: $font-text;
+                        size: 14px;
+                    }
+                    line-height: 25px;
+                }
+            }
+            @include media-minwidth($mb-screen){
+                display: grid;
+                grid-template-areas: 
+                '. a .'
+                'b c d';
+                gap: 30px;
+                .emi {
+                    grid-area: b;
+                }
+                .thomas {
+                    grid-area: c;
+                }
+                .jennie {
+                    grid-area: d;
+                }
+            }
+
+        }
+        .galery {
+            display: flex;
+            flex-flow: row wrap;
+            &_img {
+                max-width: 50%;
+            }
+            @include media-minwidth($mb-screen){
+                flex-flow: row nowrap;
+                &_img {
+                    max-width: 25%;
+                }
+            }
+        
+        }
+    }
+    footer {
+        background: $bgcolor-footer;
+        height: 350px;
+        padding: 72px auto;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        .foot {
+            display: inline-flex;
+            gap: 57px;
+            line-height: 25px;
+            &_link {
+                color: $color-foot-txt;
+                text-decoration: none;
+                font: {
+                    family: $font-text;
+                    size: 18px;
+                }
+                &:hover {
+                    color: $color-head;
+                    cursor: pointer;
+                }
+            }   
+        }
+        .icon {
+            display: inline-flex;
+            gap: 30px;
+        }
+    }
+
+}
+
+
