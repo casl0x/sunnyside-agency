@@ -125,7 +125,6 @@ body main .brand_img {
 }
 body main .brand_link {
   background-color: rgba(250, 212, 0, 0.2);
-  background-repeat: no-repeat;
   border-radius: 28px;
 }
 body main .brand_link:hover {
@@ -151,7 +150,6 @@ body main .audience_img {
 }
 body main .audience_link {
   background-color: rgba(254, 119, 102, 0.2);
-  background-repeat: no-repeat;
   border-radius: 28px;
 }
 body main .audience_link:hover {
