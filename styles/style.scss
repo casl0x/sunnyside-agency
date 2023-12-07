@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700&display=swap');
 
-$mb-screen: 400px;
+$mb-screen: 376px;
 $dk-screen: 1440px;
 $color-head: #fff;
 $hover-opacity: 0.2;
@@ -27,10 +27,7 @@ $color-foot-txt:#458D7E;;
 
 body {
     margin: 0;
-    width: 110%;
-    @include media-minwidth($mb-screen){
-        width: 100%;
-    }
+    width: 100%;
     header {
         background: {
             image: url(../images/photos/image-header.jpg);
@@ -54,7 +51,10 @@ body {
                 text-transform: uppercase;
                 text-align: center;
                 letter-spacing: 8px;
-                margin: 95px auto 0 auto;
+                margin: 6rem auto 0 auto;
+                @include media-minwidth($mb-screen) {
+                    font-size: 56px;
+                }
             }
             &_fleche {
                 margin-top: 85px;
@@ -62,8 +62,50 @@ body {
             .nav {
                 margin-top: 50px;
                 width: 95%;
+                @include media-minwidth($mb-screen){
+                    display: flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: space-between;
+                }
                 &_bar {
                     display: none;
+                    @include media-minwidth($mb-screen){
+                        display: flex;
+                        flex-flow: row;
+                        align-items: center;
+                        gap: 47px;
+                    }
+                    &_link {
+                        @include media-minwidth($mb-screen){
+                            color: $color-head;
+                            text-decoration: none;
+                            font: {
+                                family: $font-text;
+                                size: 18px;
+                            }
+                        }
+                    }
+                    .contact {
+                        @include media-minwidth($mb-screen){
+                            background-color: $color-head;
+                            color: $color-title;
+                            font: {
+                                family: $font-title;
+                                size: 15px;
+                            }
+                            text-transform: uppercase;
+                            text-align: center;
+                            border-radius: 28px;
+                            padding: 15px 30px;
+                            &:hover {
+                                color: $color-head;
+                                background-color: rgba($color-head, $hover-opacity);
+                                cursor: pointer;
+                            }
+                            
+                        }
+                    }
                 }
                 &_mob {
                     display: flex;
@@ -73,54 +115,8 @@ body {
                 }
                 &_burger {
                     margin-right: 10%;
-                }
-            }
-
-            @include media-minwidth($mb-screen) {
-                .start_title {
-                    font-size: 56px;
-                }
-                .nav {
-                    display: flex;
-                    flex-flow: row nowrap;
-                    align-items: center;
-                    justify-content: space-between;
-                    &_burger {
+                    @include media-minwidth($mb-screen){
                         display: none;
-                    }
-                    &_bar {
-                        display: flex;
-                        flex-flow: row;
-                        align-items: center;
-                        justify-content: space-evenly;
-                        width: 40vw;
-                        &_link {
-                            color: $color-head;
-                            text-decoration: none;
-                            font: {
-                                family: $font-text;
-                                size: 18px;
-                            }
-                        }
-                        
-                        
-                    }
-                }
-                .contact {
-                    background-color: $color-head;
-                    color: $color-title;
-                    font: {
-                        family: $font-title;
-                        size: 15px;
-                    }
-                    text-transform: uppercase;
-                    text-align: center;
-                    border-radius: 28px;
-                    padding: 15px 30px;
-                    &:hover {
-                        color: $color-head;
-                        background-color: rgba($color-head, $hover-opacity);
-                        cursor: pointer;
                     }
                 }
             }
@@ -161,9 +157,16 @@ body {
             }
         }
         .content {
-            max-width: 50%;
+            max-width: 100%;
             padding: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
+            @include media-minwidth($mb-screen){
+                max-width: 50%;
+                text-align: left;
+            }
             &_title {
                 color: $color-title;
                 font: {
@@ -194,21 +197,20 @@ body {
                     decoration: none;
                 }
             }
-            @include media-minwidth($mb-screen){
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-
         }
 
         .backpic {
+            overflow: hidden;
+            max-width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            @include media-minwidth($mb-screen){
+                flex-flow: row nowrap;
+            }
             &_pose {
+                width: 100%;
                 display: flex;
                 flex-flow: column nowrap;
                 align-items: center;
@@ -216,6 +218,9 @@ body {
                 padding: 5% 15%;
                 text-align: center;
                 color: $color-design;
+                @include media-minwidth($mb-screen){
+                    width: 50%;
+                }
             }
             &_title {
                 font: {
@@ -249,19 +254,24 @@ body {
                     position: center;
                 }
             }
-            @include media-minwidth($mb-screen){
-                flex-flow: row nowrap;
-            }
-
         }
         .clients {
-            margin: 10% 5%;
+            max-width: 100%;
+            margin: 10% auto;
             display: flex;
-            flex-direction: column;
+            flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
+            gap: 30px; 
+            @include media-minwidth($mb-screen){
+                margin: 5%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: 
+                '. a .'
+                'b c d'; 
+            }
             &_title {
-                padding: 10%;
                 grid-area: a;
                 text-align: center;
                 text-transform: uppercase;
@@ -273,13 +283,31 @@ body {
                 }
                 letter-spacing: 5px;
             }
+            .emi {
+                @include media-minwidth($mb-screen){
+                    grid-area: b;
+                } 
+            }
+            .thomas {
+                @include media-minwidth($mb-screen){
+                    grid-area: c;
+                }
+            }
+            .jennie {
+                @include media-minwidth($mb-screen){
+                    grid-area: d;
+                }
+            }
             &_about {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                width: 350px;
-                padding: 5% 10%;
+                width: 100%;
+                @include media-minwidth($mb-screen){
+                    width: 350px;
+                    padding: 5% 10%;
+                }
                 &_pp {
                     width: 72px;
                     border-radius: 72px;
@@ -292,6 +320,10 @@ body {
                         size: 18px;
                     }
                     line-height: 32px;
+                    margin: auto 10%;
+                    @include media-minwidth($mb-screen){
+                        margin: 0;
+                    }
                 }
                 &_name {
                     color: $color-title;
@@ -308,42 +340,27 @@ body {
                         size: 14px;
                     }
                     line-height: 25px;
+                    margin-top: 0;
                 }
             }
-            @include media-minwidth($mb-screen){
-                display: grid;
-                grid-template-areas: 
-                '. a .'
-                'b c d';
-                gap: 30px;
-                .emi {
-                    grid-area: b;
-                }
-                .thomas {
-                    grid-area: c;
-                }
-                .jennie {
-                    grid-area: d;
-                }
-            }
-
         }
         .galery {
+            max-width: 100%;
             display: flex;
             flex-flow: row wrap;
-            &_img {
-                max-width: 50%;
-            }
             @include media-minwidth($mb-screen){
                 flex-flow: row nowrap;
-                &_img {
+            }
+            &_img {
+                max-width: 50%;
+                @include media-minwidth($mb-screen){
                     max-width: 25%;
                 }
             }
-        
         }
     }
     footer {
+        width: 100%;
         background: $bgcolor-footer;
         height: 350px;
         padding: 72px auto;

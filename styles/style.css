@@ -1,12 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700&display=swap");
 body {
   margin: 0;
-  width: 110%;
-}
-@media (min-width: 400px) {
-  body {
-    width: 100%;
-  }
+  width: 100%;
 }
 body header {
   background-image: url(../images/photos/image-header.jpg);
@@ -29,7 +24,12 @@ body header .start_title {
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 8px;
-  margin: 95px auto 0 auto;
+  margin: 6rem auto 0 auto;
+}
+@media (min-width: 376px) {
+  body header .start_title {
+    font-size: 56px;
+  }
 }
 body header .start_fleche {
   margin-top: 85px;
@@ -38,8 +38,49 @@ body header .start .nav {
   margin-top: 50px;
   width: 95%;
 }
+@media (min-width: 376px) {
+  body header .start .nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
 body header .start .nav_bar {
   display: none;
+}
+@media (min-width: 376px) {
+  body header .start .nav_bar {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 47px;
+  }
+}
+@media (min-width: 376px) {
+  body header .start .nav_bar_link {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Barlow", sans-serif;
+    font-size: 18px;
+  }
+}
+@media (min-width: 376px) {
+  body header .start .nav_bar .contact {
+    background-color: #fff;
+    color: #24303E;
+    font-family: "Fraunces", serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 28px;
+    padding: 15px 30px;
+  }
+  body header .start .nav_bar .contact:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+  }
 }
 body header .start .nav_mob {
   display: flex;
@@ -50,46 +91,9 @@ body header .start .nav_mob {
 body header .start .nav_burger {
   margin-right: 10%;
 }
-@media (min-width: 400px) {
-  body header .start .start_title {
-    font-size: 56px;
-  }
-  body header .start .nav {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-between;
-  }
+@media (min-width: 376px) {
   body header .start .nav_burger {
     display: none;
-  }
-  body header .start .nav_bar {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 40vw;
-  }
-  body header .start .nav_bar_link {
-    color: #fff;
-    text-decoration: none;
-    font-family: "Barlow", sans-serif;
-    font-size: 18px;
-  }
-  body header .start .contact {
-    background-color: #fff;
-    color: #24303E;
-    font-family: "Fraunces", serif;
-    font-size: 15px;
-    text-transform: uppercase;
-    text-align: center;
-    border-radius: 28px;
-    padding: 15px 30px;
-  }
-  body header .start .contact:hover {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
   }
 }
 body main .brand {
@@ -101,7 +105,7 @@ body main .brand {
 body main .brand_img {
   max-width: 100%;
 }
-@media (min-width: 400px) {
+@media (min-width: 376px) {
   body main .brand {
     flex-flow: row-reverse nowrap;
     align-items: normal;
@@ -119,7 +123,7 @@ body main .audience {
 body main .audience_img {
   max-width: 100%;
 }
-@media (min-width: 400px) {
+@media (min-width: 376px) {
   body main .audience {
     flex-flow: row nowrap;
     align-items: normal;
@@ -129,9 +133,18 @@ body main .audience_img {
   }
 }
 body main .content {
-  max-width: 50%;
+  max-width: 100%;
   padding: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+}
+@media (min-width: 376px) {
+  body main .content {
+    max-width: 50%;
+    text-align: left;
+  }
 }
 body main .content_title {
   color: #24303E;
@@ -155,21 +168,21 @@ body main .content_link {
   text-transform: uppercase;
   text-decoration: none;
 }
-@media (min-width: 400px) {
-  body main .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
 body main .backpic {
+  overflow: hidden;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 376px) {
+  body main .backpic {
+    flex-flow: row nowrap;
+  }
+}
 body main .backpic_pose {
+  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -177,6 +190,11 @@ body main .backpic_pose {
   padding: 5% 15%;
   text-align: center;
   color: #24554A;
+}
+@media (min-width: 376px) {
+  body main .backpic_pose {
+    width: 50%;
+  }
 }
 body main .backpic_title {
   font-family: "Fraunces", serif;
@@ -201,20 +219,24 @@ body main .backpic .photo {
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (min-width: 400px) {
-  body main .backpic {
-    flex-flow: row nowrap;
-  }
-}
 body main .clients {
-  margin: 10% 5%;
+  max-width: 100%;
+  margin: 10% auto;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  gap: 30px;
+}
+@media (min-width: 376px) {
+  body main .clients {
+    margin: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". a ." "b c d";
+  }
 }
 body main .clients_title {
-  padding: 10%;
   grid-area: a;
   text-align: center;
   text-transform: uppercase;
@@ -224,13 +246,33 @@ body main .clients_title {
   font-weight: 900;
   letter-spacing: 5px;
 }
+@media (min-width: 376px) {
+  body main .clients .emi {
+    grid-area: b;
+  }
+}
+@media (min-width: 376px) {
+  body main .clients .thomas {
+    grid-area: c;
+  }
+}
+@media (min-width: 376px) {
+  body main .clients .jennie {
+    grid-area: d;
+  }
+}
 body main .clients_about {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 350px;
-  padding: 5% 10%;
+  width: 100%;
+}
+@media (min-width: 376px) {
+  body main .clients_about {
+    width: 350px;
+    padding: 5% 10%;
+  }
 }
 body main .clients_about_pp {
   width: 72px;
@@ -242,6 +284,12 @@ body main .clients_about_txt {
   font-family: "Barlow", sans-serif;
   font-size: 18px;
   line-height: 32px;
+  margin: auto 10%;
+}
+@media (min-width: 376px) {
+  body main .clients_about_txt {
+    margin: 0;
+  }
 }
 body main .clients_about_name {
   color: #24303E;
@@ -254,39 +302,28 @@ body main .clients_about_job {
   font-family: "Barlow", sans-serif;
   font-size: 14px;
   line-height: 25px;
-}
-@media (min-width: 400px) {
-  body main .clients {
-    display: grid;
-    grid-template-areas: ". a ." "b c d";
-    gap: 30px;
-  }
-  body main .clients .emi {
-    grid-area: b;
-  }
-  body main .clients .thomas {
-    grid-area: c;
-  }
-  body main .clients .jennie {
-    grid-area: d;
-  }
+  margin-top: 0;
 }
 body main .galery {
+  max-width: 100%;
   display: flex;
   flex-flow: row wrap;
+}
+@media (min-width: 376px) {
+  body main .galery {
+    flex-flow: row nowrap;
+  }
 }
 body main .galery_img {
   max-width: 50%;
 }
-@media (min-width: 400px) {
-  body main .galery {
-    flex-flow: row nowrap;
-  }
+@media (min-width: 376px) {
   body main .galery_img {
     max-width: 25%;
   }
 }
 body footer {
+  width: 100%;
   background: #90D4C6;
   height: 350px;
   padding: 72px auto;
