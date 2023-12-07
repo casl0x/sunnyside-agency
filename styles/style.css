@@ -46,35 +46,53 @@ body header .start .nav {
     justify-content: space-between;
   }
 }
-body header .start .nav_bar {
-  display: none;
-}
 @media (min-width: 376px) {
   body header .start .nav_bar {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
     display: flex;
     flex-flow: row;
     align-items: center;
     gap: 47px;
   }
 }
+body header .start .nav_bar_link {
+  display: none;
+  color: #808397;
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  font-size: 20px;
+}
 @media (min-width: 376px) {
   body header .start .nav_bar_link {
+    display: flex;
     color: #fff;
-    text-decoration: none;
-    font-family: "Barlow", sans-serif;
     font-size: 18px;
   }
+  body header .start .nav_bar_link:hover {
+    color: #24303E;
+    cursor: pointer;
+  }
+}
+body header .start .nav_bar .contact {
+  background-color: #FBD600;
+  color: #24303E;
+  font-family: "Fraunces", serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 28px;
+  padding: 15px 30px;
+}
+body header .start .nav_bar .contact:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
 }
 @media (min-width: 376px) {
   body header .start .nav_bar .contact {
     background-color: #fff;
-    color: #24303E;
-    font-family: "Fraunces", serif;
-    font-size: 15px;
-    text-transform: uppercase;
-    text-align: center;
-    border-radius: 28px;
-    padding: 15px 30px;
   }
   body header .start .nav_bar .contact:hover {
     color: #fff;
@@ -88,8 +106,8 @@ body header .start .nav_mob {
   justify-content: space-between;
   align-items: center;
 }
-body header .start .nav_burger {
-  margin-right: 10%;
+body header .start .nav_burger #check {
+  display: none;
 }
 @media (min-width: 376px) {
   body header .start .nav_burger {
@@ -104,6 +122,14 @@ body main .brand {
 }
 body main .brand_img {
   max-width: 100%;
+}
+body main .brand_link {
+  background-color: rgba(250, 212, 0, 0.2);
+  background-repeat: no-repeat;
+  border-radius: 28px;
+}
+body main .brand_link:hover {
+  background-color: #FAD400;
 }
 @media (min-width: 376px) {
   body main .brand {
@@ -122,6 +148,14 @@ body main .audience {
 }
 body main .audience_img {
   max-width: 100%;
+}
+body main .audience_link {
+  background-color: rgba(254, 119, 102, 0.2);
+  background-repeat: no-repeat;
+  border-radius: 28px;
+}
+body main .audience_link:hover {
+  background-color: #FE7766;
 }
 @media (min-width: 376px) {
   body main .audience {

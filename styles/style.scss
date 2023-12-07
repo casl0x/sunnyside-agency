@@ -3,6 +3,7 @@
 $mb-screen: 376px;
 $dk-screen: 1440px;
 $color-head: #fff;
+$color-hbmenu:#FBD600;
 $hover-opacity: 0.2;
 $font-title: 'Fraunces', serif;
 $color-title: #24303E;
@@ -69,41 +70,56 @@ body {
                     justify-content: space-between;
                 }
                 &_bar {
-                    display: none;
                     @include media-minwidth($mb-screen){
+                        margin: 0;
+                        padding: 0;
+                        background-color: transparent;
                         display: flex;
                         flex-flow: row;
                         align-items: center;
                         gap: 47px;
                     }
                     &_link {
+                        display: none;
+                        color: $color-text;
+                        text-decoration: none;
+                        font: {
+                            family: $font-text;
+                            size: 20px;
+                        }
                         @include media-minwidth($mb-screen){
+                            display: flex;
                             color: $color-head;
-                            text-decoration: none;
-                            font: {
-                                family: $font-text;
-                                size: 18px;
+                            font-size: 18px;
+                            &:hover {
+                                color: $color-title;
+                                cursor: pointer;
                             }
                         }
                     }
                     .contact {
+                        background-color: $color-hbmenu;
+                        color: $color-title;
+                        font: {
+                            family: $font-title;
+                            size: 15px;
+                        }
+                        text-transform: uppercase;
+                        text-align: center;
+                        border-radius: 28px;
+                        padding: 15px 30px;
+                        &:hover {
+                            color: $color-head;
+                            background-color: rgba($color-head, $hover-opacity);
+                            cursor: pointer;
+                        }
                         @include media-minwidth($mb-screen){
                             background-color: $color-head;
-                            color: $color-title;
-                            font: {
-                                family: $font-title;
-                                size: 15px;
-                            }
-                            text-transform: uppercase;
-                            text-align: center;
-                            border-radius: 28px;
-                            padding: 15px 30px;
                             &:hover {
                                 color: $color-head;
                                 background-color: rgba($color-head, $hover-opacity);
                                 cursor: pointer;
                             }
-                            
                         }
                     }
                 }
@@ -114,7 +130,9 @@ body {
                     align-items: center;
                 }
                 &_burger {
-                    margin-right: 10%;
+                    #check {
+                        display: none;
+                    }
                     @include media-minwidth($mb-screen){
                         display: none;
                     }
@@ -132,6 +150,16 @@ body {
             &_img {
                 max-width: 100%;
             }
+            &_link {
+                background: {
+                    color: rgba($color-lm-brand, $hover-opacity);
+                    repeat: no-repeat;
+                }
+                border-radius: 28px;
+                &:hover{
+                    background-color: $color-lm-brand;
+                }
+            }
             @include media-minwidth($mb-screen){
                 flex-flow: row-reverse nowrap;
                 align-items: normal;
@@ -147,6 +175,16 @@ body {
             align-items: center;
             &_img {
                 max-width: 100%;
+            }
+            &_link {
+                background: {
+                    color: rgba($color-lm-audiance, $hover-opacity);
+                    repeat: no-repeat;
+                }
+                border-radius: 28px;
+                &:hover{
+                    background-color: $color-lm-audiance;
+                }
             }
             @include media-minwidth($mb-screen){
                 flex-flow: row nowrap;
